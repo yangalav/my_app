@@ -1,0 +1,17 @@
+{
+  "name": "my_app",
+  "description": "",
+  "main": "server.js",
+  "authors": [
+    "Viswada Yangala <yangalav@go.stockton.edu>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
