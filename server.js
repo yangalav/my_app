@@ -5,6 +5,7 @@ var db = mongojs('contactlist', ['contactlist']);
 var bodyParser = require('body-parser');
 
 app.use(express.static(__dirname + "/public" ));
+app.use(bodyParser.json());
 
 app.get('/contactlist', function(req, res) {
   console.log("I received a GET request");
@@ -17,9 +18,9 @@ app.get('/contactlist', function(req, res) {
 
 app.post('/contactlist', function(req, res){
   console.log(req.body);
-  // db.contactlist.insert(data, function(err, result){
-  //   res.write
-  // });
+    db.contactlist.insert(req.body, function(err, doc){
+      res.json(doc);
+    });
 });
 
 app.listen(3000);
