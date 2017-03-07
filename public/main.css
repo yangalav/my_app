@@ -1,3 +1,18 @@
 body {
   background: salmon;
+  font-family: 'Exo 2', sans-serif;
+  font-size: 20px;
+}
+
+h1 {
+  font-family: 'Lobster', cursive;
+  font-size: 90px;
+}
+
+th {
+  font-weight: 700;
+}
+
+.custom {
+    width: 78px !important;
 }
