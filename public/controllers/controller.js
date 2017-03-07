@@ -6,7 +6,7 @@ myApp.controller('AppCtrl', ['$scope', '$http',
 
   var refresh = function(){
      $http.get('/contactlist').then(function (resp){
-       console.log('I got the data i requested');
+       console.log('I got the data !!!');
        $scope.contactlist = resp.data;
        $scope.contact = {};
        console.log(resp.data);
@@ -16,10 +16,17 @@ myApp.controller('AppCtrl', ['$scope', '$http',
   refresh();
 
      $scope.addContact = function() {
-       console.log('i made a post request, here is the data', $scope.contact);
+       console.log('i made a post request, here is the data !!!', $scope.contact);
        $http.post('/contactlist', $scope.contact).then(function(resp){
          console.log(resp);
          refresh();
        });
+     };
+
+     $scope.delete = function(contactID){
+        console.log(contactID);
+        $http.delete('/contactlist/' + contactID).then(function (resp){
+          refresh();
+        });
      };
 }]);
