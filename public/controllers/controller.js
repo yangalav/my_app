@@ -29,4 +29,18 @@ myApp.controller('AppCtrl', ['$scope', '$http',
           refresh();
         });
      };
+
+     $scope.edit = function(contactID){
+       console.log(contactID);
+       $http.get('/contactlist/' + contactID).then(function (resp){
+         $scope.contact = resp.data;
+       });
+     };
+
+     $scope.update = function(){
+       console.log($scope.contact._id)
+       $http.put('/contactlist/' + $scope.contact._id, $scope.contact).then(function (resp){
+         refresh();
+       });
+     }
 }]);
