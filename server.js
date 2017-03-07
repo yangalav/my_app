@@ -1,7 +1,7 @@
 var express = require('express');
 var app = express();
-var mongojs = require('./db/config.js');
-var db = mongojs('contactlist', ['contactlist']);
+var mongojs = require('mongojs');
+var db = mongojs('contactlist', ['contactlist']); 
 var bodyParser = require('body-parser');
 
 app.use(express.static(__dirname + "/public" ));
