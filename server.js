@@ -1,7 +1,7 @@
 var express = require('express');
 var app = express();
 var mongojs = require('mongojs');
-var db = mongojs('contactlist', ['contactlist']);
+var db = mongojs('https://boiling-citadel-39586.herokuapp.com', ['contactlist']); 
 var bodyParser = require('body-parser');
 
 app.use(express.static(__dirname + "/public" ));
