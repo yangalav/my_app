@@ -14,5 +14,9 @@ th {
 }
 
 .custom {
-    width: 78px !important;
+    width: 78px;
+}
+
+.custom2 {
+  width: 100px;
 }

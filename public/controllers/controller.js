@@ -43,4 +43,8 @@ myApp.controller('AppCtrl', ['$scope', '$http',
          refresh();
        });
      }
+
+     $scope.deselect = function(){
+       $scope.contact = {};
+     }
 }]);
