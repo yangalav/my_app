@@ -1,7 +1,10 @@
 body {
-  background: salmon;
+  background: url("http://everycollegegirl.com/wp-content/uploads/2011/10/cellphone.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
   font-family: 'Exo 2', sans-serif;
   font-size: 20px;
+  color: white;
 }
 
 h1 {
